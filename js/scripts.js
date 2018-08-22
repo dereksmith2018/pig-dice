@@ -1,7 +1,8 @@
-var totalValue = [rollValue1 + rollValue1]
-var rollValue1 = Math.floor((Math.random()* 6)+1)
-// var rollValue2 = Math.floor((Math.random()* 6)+1)
-var clicks = 0
+
+var rollValue = Math.floor((Math.random()* 6)+1)
+var totalValue1 = rollValue + rollValue
+var totalValue2 = rollValue + rollValue
+
 
 // function roll(rollValue1){
 //   roll.clicks += roll.clicks;
@@ -18,8 +19,10 @@ var clicks = 0
 $(document).ready(function(){
   $("#rollOne").click(function(event) {
     event.preventDefault();
-    $("#outputOne").append(rollValue1);
-    $("#total").append(clicks);
+    $("#outputOne").append(rollValue);
+    $("#totalOne").append(totalValue1);
+
+
 
 
   });
@@ -27,11 +30,13 @@ $(document).ready(function(){
 
 
 
-  // $("#rollTwo").click(function(event) {
-  //   event.preventDefault();
-  //   $("#outputTwo").text(rollValue2).val();
-  //     console.log();
+  $("#rollTwo").click(function(event) {
+    event.preventDefault();
+
+      $("#outputTwo").append(rollValue);
+      $("#totalTwo").append(totalValue2);
 
 
 
   });
+});
